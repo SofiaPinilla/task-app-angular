@@ -1,0 +1,6 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #343A40;
+    color: #F9FFFF;
+}
