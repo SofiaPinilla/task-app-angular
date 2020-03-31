@@ -1,3 +1,13 @@
 .navbar-collapse {
     justify-content: space-between;
 }
+
+.active-link {
+    background-color: rgb(94, 94, 94);
+    transition: 1s;
+}
+
+.nav-item:hover {
+    background-color: rgb(94, 94, 94);
+    transition: 1s;
+}
