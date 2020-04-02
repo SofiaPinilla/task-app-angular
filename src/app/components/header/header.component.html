@@ -11,15 +11,30 @@
                 </li>
             </ul>
             <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" routerLink="login" routerLinkActive="active-link">Login</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" routerLink="register" routerLinkActive="active-link">Sign up</a>
-                </li>
+                <div class="loggedIn" *ngIf="userService.user as user">
+                    <li class="nav-item active">
+                        <a class="nav-link" routerLink="profile" routerLinkActive="active-link">{{user.username}}</a>
+                    </li>
+                </div>
+                <div class="loggedIn" *ngIf="userService.user as user">
+                    <li class="nav-item active">
+                        <a class="nav-link" (click)="logout()">Log out</a>
+                    </li>
+                </div>
             </ul>
 
+            <ul class="navbar-nav">
+                <div class="notLogIn" *ngIf="!userService.user">
+                    <li class="nav-item active">
+                        <a class="nav-link" routerLink="login" routerLinkActive="active-link">Login</a>
+                    </li>
+                </div>
+                <div class="notLogIn" *ngIf="!userService.user">
+                    <li class="nav-item active">
+                        <a class="nav-link" routerLink="register" routerLinkActive="active-link">Sign up</a>
+                    </li>
+                </div>
+            </ul>
         </div>
-
     </nav>
 </header>

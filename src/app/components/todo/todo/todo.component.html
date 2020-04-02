@@ -1,0 +1,17 @@
+<div class="bloqueCrearLista">
+    <input placeholder="Nueva lista.." (keyup.enter)="crearLista(tituloLista.value); tituloLista.value=''" type="text" #tituloLista>
+    <button (click)="crearLista(tituloLista.value); tituloLista.value=''">Nueva Lista</button>
+</div>
+
+<div class="prueba" *ngFor="let lista of listas">
+    <div class="lista">
+        <div class="headerLista">
+            <span class="titulo">{{lista.titulo}}      <button class="btn btn-danger" (click)="eliminarLista(lista)">✘</button>
+        </span>
+        </div>
+
+        <app-sub-todo [subLista]="lista.subLista"></app-sub-todo>
+
+
+    </div>
+</div>

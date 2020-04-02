@@ -10,6 +10,12 @@ import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LogoutComponent } from './components/logout/logout.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { TodoComponent } from './components/todo/todo/todo.component';
+import { SubTodoComponent } from './components/todo/sub-todo/sub-todo.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -19,12 +25,18 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     FooterComponent,
     LoginComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    LogoutComponent,
+    ProfileComponent,
+    TodoComponent,
+    SubTodoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]

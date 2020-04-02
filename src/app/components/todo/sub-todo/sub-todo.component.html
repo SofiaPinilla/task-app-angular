@@ -1,0 +1,29 @@
+<div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Añadir Tarea" #tituloTarea (keyup.enter)="crearTarea(tituloTarea.value) ; tituloTarea.value = ''">
+    <button class="btn btn-secondary" (click)="crearTarea(tituloTarea.value); tituloTarea.value = ''">Nueva Tarea</button>
+</div>
+
+
+<!-- <div class="prueba2" *ngFor="let tarea of subLista">
+    <span>{{tarea.titulo2}}</span>
+    <div class="botones">
+        <button class="btn btn-danger" (click)="eliminarTarea(tarea)">Eliminar</button>
+    </div>
+</div> -->
+
+<div cdkDropListGroup>
+    <div class="example-container">
+        <h2>Tareas</h2>
+
+        <div cdkDropList [cdkDropListData]="subLista" class="example-list" (cdkDropListDropped)="drop($event)">
+            <div class="example-box" *ngFor="let tarea of subLista" cdkDrag>
+                <div class="prueba2">
+                    <span>{{tarea.titulo2}}</span>
+                    <div class="botones">
+                        <button class="btn btn-danger" (click)="eliminarTarea(tarea)">X</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
