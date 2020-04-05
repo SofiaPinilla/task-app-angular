@@ -1,0 +1,66 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.bloqueCrearLista {
+    padding: 10px;
+    background: #BABDBF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.bloqueCrearLista .btn-secondary {
+    margin: 5px;
+    width: 10vw;
+}
+
+.lista {
+    width: 312.5px;
+    min-height: 200px;
+    margin: 5px;
+    padding: 5px;
+    background: #BABDBF;
+    color: white;
+    border-radius: 10px;
+    padding: 8px;
+}
+
+.titulo {
+    color: #384966;
+    margin: 0 auto;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input {
+    background: transparent;
+    color: rgb(204, 204, 204);
+    text-align: center;
+}
+
+.btn-danger {
+    padding: 5px;
+    font-size: 10px;
+}
+
+.prueba {
+    display: inline-flex;
+}
+
+.centrar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
