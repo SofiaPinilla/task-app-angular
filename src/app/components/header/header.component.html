@@ -1,0 +1,45 @@
+<header>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" routerLink="" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Home</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <div class="loggedIn" *ngIf="userService.user as user">
+                    <li class="nav-item active">
+                        <a class="nav-link" routerLink="todo" routerLinkActive="active-link">Trello</a>
+                    </li>
+                </div>
+                <div class="loggedIn" *ngIf="userService.user as user">
+                    <li class="nav-item active">
+                        <a class="nav-link" routerLink="profile" routerLinkActive="active-link">{{user.username}}</a>
+                    </li>
+                </div>
+                <div class="loggedIn" *ngIf="userService.user as user">
+                    <li class="nav-item active">
+                        <a class="nav-link" (click)="logout()">Log out</a>
+                    </li>
+                </div>
+            </ul>
+
+            <ul class="navbar-nav">
+                <div class="notLogIn" *ngIf="!userService.user">
+                    <li class="nav-item active">
+                        <a class="nav-link" routerLink="login" routerLinkActive="active-link">Login</a>
+                    </li>
+                </div>
+                <div class="notLogIn" *ngIf="!userService.user">
+                    <li class="nav-item active">
+                        <a class="nav-link" routerLink="register" routerLinkActive="active-link">Sign up</a>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </nav>
+</header>
