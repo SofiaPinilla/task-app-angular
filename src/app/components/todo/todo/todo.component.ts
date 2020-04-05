@@ -16,7 +16,7 @@ export class TodoComponent implements OnInit {
   listas = [];
   crearLista(titulo){
     if (titulo!=""){
-    var nuevaLista={
+    let nuevaLista={
       titulo: titulo,
       subLista: []
     }
@@ -32,25 +32,6 @@ export class TodoComponent implements OnInit {
     this.listas.splice(this.listas.indexOf(tarea),1)
   };
 
-  title2 = 'dragdrop';
-
-  todo = [
  
-  ];
-
-  done = [
-    
-  ];
-
-  drop(event: CdkDragDrop<string[]>) {
-    if (event.previousContainer === event.container) {
-      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
-    } else {
-      transferArrayItem(event.previousContainer.data,
-                        event.container.data,
-                        event.previousIndex,
-                        event.currentIndex);
-    }
-  }
   
 }

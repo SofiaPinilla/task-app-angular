@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
           localStorage.setItem('authToken',res.token);
           setTimeout(() => this.message = "", 2500);
           setTimeout(() => {
-            this.router.navigate([''])
+            this.router.navigate(['todo'])
           }, 2500);
         },
         err => {

@@ -13,6 +13,11 @@
             <ul class="navbar-nav">
                 <div class="loggedIn" *ngIf="userService.user as user">
                     <li class="nav-item active">
+                        <a class="nav-link" routerLink="todo" routerLinkActive="active-link">Trello</a>
+                    </li>
+                </div>
+                <div class="loggedIn" *ngIf="userService.user as user">
+                    <li class="nav-item active">
                         <a class="nav-link" routerLink="profile" routerLinkActive="active-link">{{user.username}}</a>
                     </li>
                 </div>

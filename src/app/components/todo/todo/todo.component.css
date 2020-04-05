@@ -1,16 +1,25 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
 .bloqueCrearLista {
-    height: 90px;
-    max-width: 968px;
-    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    background: #BABDBF;
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
     border-radius: 10px;
-    border-style: solid;
-    border-color: black;
-    border-width: 1px;
-    margin: 0 auto;
+    margin: 10px;
+}
+
+.bloqueCrearLista .btn-secondary {
+    margin: 5px;
+    width: 10vw;
 }
 
 .lista {
@@ -18,18 +27,14 @@
     min-height: 200px;
     margin: 5px;
     padding: 5px;
-    background: rgba(0, 0, 0, 0.2);
+    background: #BABDBF;
     color: white;
-    border-width: 4px;
-    border-style: solid;
-    border-color: rgba(0, 0, 0, 0.6);
     border-radius: 10px;
-    border-width: 1px;
     padding: 8px;
 }
 
 .titulo {
-    color: rgb(34, 34, 34);
+    color: #384966;
     margin: 0 auto;
     background: transparent;
     display: flex;
@@ -39,62 +44,23 @@
     margin-top: 10px;
 }
 
-.prueba {
-    display: inline-flex;
-    margin: 0 auto;
-}
-
-button {
-    border-radius: 4px;
-    padding: 3px;
-    background: rgba(180, 180, 180);
-    border-color: rgb(0, 0, 0, 0.5);
-    border-width: 0.7px;
-}
-
 input {
     background: transparent;
-    border-color: rgb(0, 0, 0, 0.5);
-    border-top-width: 0px;
-    border-bottom-width: 0.7px;
-    border-right-width: 0px;
-    border-left-width: 0px;
-    box-shadow: none;
-    outline: none;
     color: rgb(204, 204, 204);
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearence: none;
-    -o-appearance: none;
-    appearance: none;
-    font-size: 19px;
-    font-weight: 400;
     text-align: center;
 }
 
-.headerLista {
-    display: flex;
-    flex-direction: row;
-    background: transparent;
-}
-
-.adios {
-    width: 100px;
-    height: 100px;
-    background-color: blue;
-}
-
-.hola {
-    width: 200px;
-    height: 200px;
-    background: rgb(142, 142, 255);
-}
-
-.eliminarLista {
-    display: block;
-    border-radius: 50%;
-    height: 20px;
-    width: 20px;
+.btn-danger {
+    padding: 5px;
     font-size: 10px;
-    float: right;
+}
+
+.prueba {
+    display: inline-flex;
+}
+
+.centrar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }

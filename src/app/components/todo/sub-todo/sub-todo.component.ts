@@ -20,18 +20,17 @@ export class SubTodoComponent implements OnInit {
   @Input() subLista;
   crearTarea(titulo2) {
     if (titulo2 != '') {
-      var tarea = {
+      let tarea = {
         titulo2: titulo2
       }
       this.subLista.push(tarea)
-      console.log(this.subLista)
+      
     }
     else {
       alert('Introduce el título de la tarea')
     }
   }
   eliminarTarea(item) {
-    console.log(this.subLista.indexOf(item));
     this.subLista.splice(this.subLista.indexOf(item), 1)
   };
 

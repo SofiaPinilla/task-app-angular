@@ -13,7 +13,6 @@
 
 <div cdkDropListGroup>
     <div class="example-container">
-        <h2>Tareas</h2>
 
         <div cdkDropList [cdkDropListData]="subLista" class="example-list" (cdkDropListDropped)="drop($event)">
             <div class="example-box" *ngFor="let tarea of subLista" cdkDrag>

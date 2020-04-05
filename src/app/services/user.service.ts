@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Token } from '@angular/compiler/src/ml_parser/lexer';
+import { isNullOrUndefined } from 'util';
 @Injectable({
   providedIn: 'root'
 })
@@ -25,5 +27,8 @@ export class UserService {
         authorization:token
       }
     });
+  }
+  getCurrentUser(){
+      return this.user;
   }
 }
